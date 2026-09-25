@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="id">
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JEJAK PLASTIK — Dari Produk Menjadi Sampah</title>
+
+    <meta name="description"
+          content="Website pembelajaran interaktif tentang perjalanan sampah plastik dari bahan mentah hingga menjadi sampah.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+</div>
+
+
+<!-- =====================================================
+     LOADING
+===================================================== -->
+
+<div id="loader">
+
+    <div class="loader-logo">♻</div>
+
+    <h2>JEJAK<span>PLASTIK</span></h2>
+
+    <div class="loader-line">
+        <div></div>
+    </div>
+
+    <p>Menyiapkan perjalananmu...</p>
+
+</div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">♻</span>
+            <span>JEJAK<span>PLASTIK</span></span>
+        </a>
+
+        <nav id="navMenu">
+
+            <a href="#home">Beranda</a>
+            <a href="#jenis">Jenis</a>
+            <a href="#perjalanan">Perjalanan</a>
+            <a href="#dampak">Dampak</a>
+            <a href="#aksi">Aksi</a>
+
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero section" id="home">
+
+    <div class="hero-content reveal">
+
+        <div class="eyebrow">
+            <span></span>
+            DIGITAL LEARNING EXPERIENCE
+        </div>
+
+        <h1>
+            Pernahkah kamu
+            <strong>bertanya?</strong>
+        </h1>
+
+        <p class="hero-title">
+            Dari mana sebenarnya
+            <span>plastik</span> yang ada di tanganmu berasal?
+        </p>
+
+        <p class="hero-description">
+            Ikuti perjalanan sebuah kemasan dari bahan mentah,
+            diproses di pabrik, dikirim ke toko, digunakan,
+            hingga akhirnya menjadi sampah.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#jenis" class="btn btn-primary">
+                Mulai Jelajahi
+                <span>→</span>
+            </a>
+
+            <a href="#perjalanan" class="btn btn-secondary">
+                Lihat Perjalanan
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual reveal">
+
+        <div class="planet">
+
+            <div class="planet-ring ring-1"></div>
+            <div class="planet-ring ring-2"></div>
+
+            <div class="plastic-orbit orbit-1">🧴</div>
+            <div class="plastic-orbit orbit-2">🥤</div>
+            <div class="plastic-orbit orbit-3">🍟</div>
+            <div class="plastic-orbit orbit-4">🛍️</div>
+
+            <div class="planet-core">
+
+                <span>PLASTIC</span>
+                <strong>JOURNEY</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro section reveal">
+
+    <div class="section-label">
+        01 / KENALI
+    </div>
+
+    <div class="intro-grid">
+
+        <div>
+
+            <h2>
+                Sampah tidak muncul
+                <span>begitu saja.</span>
+            </h2>
+
+        </div>
+
+        <div>
+
+            <p>
+                Setiap benda yang kita gunakan mempunyai perjalanan.
+                Sebuah botol plastik misalnya, tidak langsung muncul
+                di rak toko.
+            </p>
+
+            <p>
+                Ada bahan mentah, proses industri, energi,
+                transportasi, distribusi, hingga akhirnya
+                benda tersebut sampai ke tangan kita.
+            </p>
+
+            <p>
+                Ketika sudah tidak digunakan, perjalanan itu
+                belum tentu selesai.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     JENIS SAMPAH
+===================================================== -->
+
+<section class="waste-section section" id="jenis">
+
+    <div class="section-heading reveal">
+
+        <div>
+
+            <div class="section-label">
+                02 / JENIS SAMPAH
+            </div>
+
+            <h2>
+                Kenali benda
+                <span>di sekitarmu.</span>
+            </h2>
+
+        </div>
+
+        <p>
+            Klik salah satu gambar untuk melihat bagaimana
+            benda tersebut dibuat dan bagaimana perjalanannya
+            hingga menjadi sampah.
+        </p>
+
+    </div>
+
+
+    <div class="waste-grid" id="wasteGrid"></div>
+
+</section>
+
+
+<!-- =====================================================
+     MODAL DETAIL
+===================================================== -->
+
+<div class="modal" id="detailModal">
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div class="modal-content">
+
+        <button class="modal-close" id="modalClose">
+            ×
+        </button>
+
+        <div id="modalBody"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     PERJALANAN
+===================================================== -->
+
+<section class="journey section" id="perjalanan">
+
+    <div class="section-heading reveal">
+
+        <div>
+
+            <div class="section-label">
+                03 / PERJALANAN
+            </div>
+
+            <h2>
+                Dari bahan mentah
+                <span>hingga sampah.</span>
+            </h2>
+
+        </div>
+
+        <p>
+            Hampir setiap kemasan melewati beberapa tahap
+            sebelum akhirnya sampai ke tangan kita.
+        </p>
+
+    </div>
+
+
+    <div class="journey-line">
+
+        <div class="journey-progress"></div>
+
+
+        <div class="journey-step reveal">
+
+            <div class="step-number">01</div>
+
+            <div class="step-icon">⛽</div>
+
+            <div class="step-content">
+
+                <span>BAHAN MENTAH</span>
+
+                <h3>Dari mana plastik berasal?</h3>
+
+                <p>
+                    Banyak plastik konvensional dibuat dari bahan
+                    baku petrokimia yang berasal dari minyak bumi
+                    atau gas alam.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="journey-step reveal">
+
+            <div class="step-number">02</div>
+
+            <div class="step-icon">🏭</div>
+
+            <div class="step-content">
+
+                <span>PABRIK</span>
+
+                <h3>Bahan diubah menjadi resin</h3>
+
+                <p>
+                    Bahan baku diproses menjadi bahan kimia
+                    dan kemudian menjadi resin plastik berbentuk
+                    butiran kecil atau pellet.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="journey-step reveal">
+
+            <div class="step-number">03</div>
+
+            <div class="step-icon">⚙️</div>
+
+            <div class="step-content">
+
+                <span>PRODUKSI</span>
+
+                <h3>Plastik dibentuk</h3>
+
+                <p>
+                    Pellet plastik dipanaskan dan dibentuk
+                    menggunakan berbagai proses seperti
+                    injection molding, blow molding,
+                    extrusion, atau thermoforming.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="journey-step reveal">
+
+            <div class="step-number">04</div>
+
+            <div class="step-icon">🚚</div>
+
+            <div class="step-content">
+
+                <span>DISTRIBUSI</span>
+
+                <h3>Perjalanan menuju toko</h3>
+
+                <p>
+                    Produk dikemas, dipindahkan ke gudang,
+                    diangkut menggunakan kendaraan dan
+                    didistribusikan ke toko.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="journey-step reveal">
+
+            <div class="step-number">05</div>
+
+            <div class="step-icon">🛒</div>
+
+            <div class="step-content">
+
+                <span>KONSUMSI</span>
+
+                <h3>Sampai ke tangan kita</h3>
+
+                <p>
+                    Produk dibeli dan digunakan. Pada beberapa
+                    jenis kemasan, masa penggunaannya bisa
+                    sangat singkat dibandingkan proses produksinya.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="journey-step reveal">
+
+            <div class="step-number">06</div>
+
+            <div class="step-icon">🗑️</div>
+
+            <div class="step-content">
+
+                <span>AKHIR PENGGUNAAN</span>
+
+                <h3>Menjadi sampah</h3>
+
+                <p>
+                    Setelah tidak diperlukan, kemasan menjadi
+                    sampah. Nasib berikutnya bergantung pada
+                    bagaimana sampah tersebut dikelola.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MATERIAL
+===================================================== -->
+
+<section class="materials section reveal">
+
+    <div class="section-label">
+        04 / MATERIAL
+    </div>
+
+    <h2>
+        Tidak semua plastik
+        <span>itu sama.</span>
+    </h2>
+
+    <p class="section-description">
+        Jenis plastik memiliki sifat dan penggunaan yang berbeda.
+    </p>
+
+
+    <div class="material-table">
+
+        <div class="material-row material-header">
+
+            <span>KODE</span>
+            <span>NAMA</span>
+            <span>CONTOH</span>
+            <span>CATATAN</span>
+
+        </div>
+
+
+        <div class="material-row">
+
+            <span class="botol.jpg">1</span>
+
+            <strong>PET</strong>
+
+            <span>Botol minuman</span>
+
+            <span>
+                Sering digunakan untuk botol minuman.
+            </span>
+
+        </div>
+
+
+        <div class="material-row">
+
+            <span class="plastic-code">2</span>
+
+            <strong>HDPE</strong>
+
+            <span>Botol & wadah</span>
+
+            <span>
+                Plastik yang relatif kuat dan banyak digunakan sebagai kemasan.
+            </span>
+
+        </div>
+
+
+        <div class="material-row">
+
+            <span class="plastic-code">5</span>
+
+            <strong>PP</strong>
+
+            <span>Cup & wadah makanan</span>
+
+            <span>
+                Banyak digunakan untuk berbagai wadah makanan dan minuman.
+            </span>
+
+        </div>
+
+
+        <div class="material-row">
+
+            <span class="plastic-code">4</span>
+
+            <strong>LDPE</strong>
+
+            <span>Kantong plastik</span>
+
+            <span>
+                Fleksibel dan banyak digunakan sebagai film plastik.
+            </span>
+
+        </div>
+
+
+        <div class="material-row">
+
+            <span class="plastic-code">7</span>
+
+            <strong>OTHER</strong>
+
+            <span>Plastik tertentu</span>
+
+            <span>
+                Kategori beragam dengan karakteristik berbeda.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DAMPAK
+===================================================== -->
+
+<section class="impact section" id="dampak">
+
+    <div class="section-heading reveal">
+
+        <div>
+
+            <div class="section-label">
+                05 / DAMPAK
+            </div>
+
+            <h2>
+                Ketika sampah
+                <span>tidak dikelola.</span>
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="impact-grid">
+
+
+        <article class="impact-card reveal">
+
+            <div class="impact-icon">🌊</div>
+
+            <h3>Lingkungan Perairan</h3>
+
+            <p>
+                Sampah yang tidak dikelola dapat terbawa
+                aliran air menuju sungai dan laut.
+            </p>
+
+        </article>
+
+
+        <article class="impact-card reveal">
+
+            <div class="impact-icon">🌱</div>
+
+            <h3>Lingkungan Darat</h3>
+
+            <p>
+                Sampah yang tercecer dapat mengganggu
+                kebersihan dan kualitas lingkungan.
+            </p>
+
+        </article>
+
+
+        <article class="impact-card reveal">
+
+            <div class="impact-icon">🐢</div>
+
+            <h3>Satwa</h3>
+
+            <p>
+                Sampah plastik yang masuk ke habitat satwa
+                dapat menjadi risiko bagi kehidupan mereka.
+            </p>
+
+        </article>
+
+
+        <article class="impact-card reveal">
+
+            <div class="impact-icon">☁️</div>
+
+            <h3>Emisi</h3>
+
+            <p>
+                Produksi dan pengelolaan plastik membutuhkan
+                energi dan dapat menghasilkan emisi.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STATISTIK
+===================================================== -->
+
+<section class="stats section reveal">
+
+    <div class="section-label">
+        06 / FAKTA
+    </div>
+
+    <h2>
+        Setiap kemasan
+        <span>punya jejak.</span>
+    </h2>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-number" data-target="6">
+                0
+            </div>
+
+            <span>
+                tahap utama perjalanan
+            </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-number" data-target="5">
+                0
+            </div>
+
+            <span>
+                contoh kode plastik
+            </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-number" data-target="100">
+                0
+            </div>
+
+            <span>
+                % peran kita dalam pengelolaan
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     AKSI
+===================================================== -->
+
+<section class="action section" id="aksi">
+
+    <div class="action-box reveal">
+
+        <div class="action-decoration">
+            ♻
+        </div>
+
+        <div class="action-content">
+
+            <div class="section-label">
+                07 / SEKARANG GILIRANMU
+            </div>
+
+            <h2>
+                Perjalanan sampah
+                <span>bisa kita ubah.</span>
+            </h2>
+
+            <p>
+                Mulai dari hal sederhana:
+                kurangi penggunaan yang tidak perlu,
+                gunakan kembali jika memungkinkan,
+                dan pilah sampah sesuai jenisnya.
+            </p>
+
+            <a href="#quiz" class="btn btn-primary">
+                Uji Pengetahuanmu →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     QUIZ
+===================================================== -->
+
+<section class="quiz section" id="quiz">
+
+    <div class="section-label">
+        08 / MINI QUIZ
+    </div>
+
+    <h2>
+        Seberapa jauh
+        <span>kamu mengenalnya?</span>
+    </h2>
+
+
+    <div class="quiz-box" id="quizBox">
+
+        <div class="quiz-top">
+
+            <span id="questionNumber">
+                Pertanyaan 1 / 5
+            </span>
+
+            <span id="quizScore">
+                Skor: 0
+            </span>
+
+        </div>
+
+
+        <h3 id="questionText">
+            Memuat pertanyaan...
+        </h3>
+
+
+        <div class="answers" id="answers"></div>
+
+
+        <div class="quiz-result" id="quizResult">
+
+            <div class="result-icon">♻</div>
+
+            <h3 id="resultTitle">
+                Selesai!
+            </h3>
+
+            <p id="resultText"></p>
+
+            <button class="btn btn-primary" id="restartQuiz">
+                Coba Lagi
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="logo">
+
+                <span class="logo-icon">♻</span>
+
+                <span>
+                    JEJAK<span>PLASTIK</span>
+                </span>
+
+            </div>
+
+            <p>
+                Media pembelajaran digital tentang perjalanan
+                sampah plastik.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#home">Beranda</a>
+            <a href="#jenis">Jenis Sampah</a>
+            <a href="#perjalanan">Perjalanan</a>
+            <a href="#dampak">Dampak</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 SMPN 2 SUKARATU — Steam Project
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
